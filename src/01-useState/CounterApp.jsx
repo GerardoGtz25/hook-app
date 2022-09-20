@@ -7,15 +7,17 @@ export const CounterApp = () => {
     counter3: 30
   })
 
+  const {counter1, counter2, counter3} = counter;
+
   const handleClick = () => {
-    setCounter({...counter, counter1: counter.counter1 + 1})
+    setCounter({...counter, counter1: counter1 + 1})
   }
 
   return (
     <>
-      <h3>Counter1: {counter.counter1}</h3>
-      <h3>Counter2: {counter.counter2}</h3>
-      <h3>Counter3: {counter.counter3}</h3>
+      <h3>Counter1: {counter1}</h3>
+      <h3>Counter2: {counter2}</h3>
+      <h3>Counter3: {counter3}</h3>
       <hr />
       <button 
         onClick={handleClick}
